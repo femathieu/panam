@@ -10,7 +10,13 @@
     <body>
         <header>
             <div class="container">
-                <a class="btn" href="{{ path('logout') }}">Déconnexion</a>
+                <nav>
+                    <ul>
+                        <li><a class="btn" href="{{ path('logout') }}">Déconnexion</a></li>
+                        <li><a class="btn" href="{{ path('admin_users') }}">utilisateurs</a></li>
+                        <li><a class="btn" href="{{ path('admin_categories') }}">Categories</a></li>
+                    </ul>
+                </nav>
                 {% block header %}{% endblock %}
             </div>
         </header>

@@ -33,13 +33,17 @@ class UserController extends AbstractController{
      * @Security("has_role('ROLE_ADMIN')")
      */
     public function getSelectUser(Request $request, $id = null, UserPasswordEncoderInterface $passwordEncoder)
-    {
+    {      
+        $password = true;
         ///Fetch user if we are on update
-        $user = $this->getDoctrine()->getRepository(User::class)->find($id);
-        $form = $this->createForm(UserType::class, $user);
+        if($id != null){
+            $user = $this->getDoctrine()->getRepository(User::class)->find($id);
+            $form = $this->createForm(UserType::class, $user);
+            $password = false;
+        }
 
         ///Create new user if we are on create
-        if(!$user){
+        if($id == null){
             $user = new User();
             $form = $this->createForm(UserType::Class, $user);
         }
@@ -59,12 +63,15 @@ class UserController extends AbstractController{
             return $this->redirectToRoute('admin_users');
         }
 
+        // dump($password);
+        // exit();
 
         return $this->render(
             'admin/user/userCrud.html.twig',
             array(
                 'form' => $form->createView(),
-                'password' => false
+                'password' => $password,
+                'user' => $user
             )
         );
     }

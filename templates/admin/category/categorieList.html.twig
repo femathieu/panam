@@ -1,0 +1,20 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block body %}
+    <h1>Catégories</h1>
+    <div class="row">
+        <div class="col-12">
+            <a href="{{ path( 'admin_category') }}" class="btn btn-success">Ajouter une catégorie</a>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for category in categories %}
+            <div class="col-12">
+                <a href="{{ path('admin_category', { 'id': category.id }) }}">{{ category.label }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

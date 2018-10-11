@@ -1,6 +1,13 @@
 {% extends 'admin/base.html.twig' %}
 
+{% block title %}{{ user.username }}{% endblock %}
+
 {% block body %}
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ user.username }}</h1>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12">
             {{ form_start(form) }}
@@ -13,13 +20,13 @@
                         </div>
 
                         <div class="col-6">
-                            {% set password = '' %}
+                            {% set passwordBlockId = '' %}
                             {% if password == false %}
-                                {% set password = 'form-password' %}
+                                {% set passwordBlockId = 'password-block-id' %}
                                 <a class="btn btn-primary" id="toggle-password">changer le mot de passe</a>
                             {% endif %}
                         
-                            <div id="{{ password }}">
+                            <div id="{{ passwordBlockId }}">
                                 {{ form_row(form.plainPassword.first) }}
                                 {{ form_row(form.plainPassword.second) }}
                             </div>

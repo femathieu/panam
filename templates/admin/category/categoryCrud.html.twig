@@ -1,0 +1,20 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ category.label }}{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ category.label }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {{ form_start(form) }}
+                {{ form_row(form.label) }}
+                {{ form_row(form.isActive) }}
+                <button type="submit" class="btn btn-primary" >sauvegarder</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

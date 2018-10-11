@@ -1,58 +1,63 @@
 {% extends 'base.html.twig' %}
 {% block body%}
   <header class="block-header fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="first-level navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item dropdown active">
+      <li class="print-item nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Impression
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Produit standards</a>
-          <ul class="standard_product">
-            <li class="product">Cartes d'affaires</li>
-            <li class="product">Cartons publicitaires</li>
-            <li class="product">Accroche-portes</li>
-            <li class="product">Autcollant</li>
-            <li class="product">Affiches</li>
-            <li class="product">Bloc-notes</li>
-            <li class="product">Circulaires</li>
-          </ul>
-          <a class="dropdown-item" href="#">Grand format</a>
-          <ul class="bigformat-product">
-            <li class="product">Drapeaux</li>
-            <li class="product">Bannières en vinyle</li>
-            <li class="product">Coroplasts</li>
-            <li class="product">Panneaux-sandwich</li>
-          </ul>
-          <a class="dropdown-item" href="#">Lettrage</a>
-          <ul class="lettrage-product">
-            <li class="product">Vitrine & enseignes</li>
-            <li class="product">Véhicules</li>
-            <li class="product">Feuilles avec en-tête</li>
-            <li class="product">Cartes de souhaits</li>
-            <li class="product">Pochettes corporatives</li>
-            <li class="product">Menus / Dépliants</li>
-          </ul>
-        </div>
+            <ul class="second-level dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="container">
+          <div class="row">
+              <li class="col-12 col-md-4 dropdown-submenu"><a class="dropdown-item standard-product" href="#">Produits standards</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Cartes d’affaires</a></li>
+                  <li><a class="dropdown-item" href="#">Cartons publicitaires</a></li>
+                  <li><a class="dropdown-item" href="#">Accorche-portes</a></li>
+                  <li><a class="dropdown-item" href="#">Autocollants</a></li>
+                  <li><a class="dropdown-item" href="#">Affiches</a></li>
+                  <li><a class="dropdown-item" href="#">Cartes postales</a></li>
+                  <li><a class="dropdown-item" href="#">Bloc-notes</a></li>
+                  <li><a class="dropdown-item" href="#">Circulaires</a></li>
+                  <li><a class="dropdown-item" href="#">Feuilles avec en-tête</a></li>
+                  <li><a class="dropdown-item" href="#">Cartes de souhaits</a></li>
+                  <li><a class="dropdown-item" href="#">Pochettes corporatives</a></li>
+                  <li><a class="dropdown-item" href="#">Menus / Dépliants</a></li>
+                </ul>
+              </li>
+              <li class="col-12 col-md-4 dropdown-submenu"><a class="dropdown-item bigformat" href="#">Grand format</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Drapeaux</a></li>
+                  <li><a class="dropdown-item" href="#">Bannières en vinyle</a></li>
+                  <li><a class="dropdown-item" href="#">Coroplasts</a></li>
+                  <li><a class="dropdown-item" href="#">Panneaux-sandwich</a></li>  
+                </ul>
+              </li>
+              <li class="col-12 col-md-4 dropdown-submenu"><a class="dropdown-item letering" href="#">Lettrage</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Vitrine & enseignes</a></li>
+                  <li><a class="dropdown-item" href="#">Véhicules</a></li>
+                </ul>
+              </li>
+              </div>
+            </div>
+            </ul>
+
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          web
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Sites web</a>
-          <a class="dropdown-item" href="#">Gestion de réseaux sociaux</a>
-          <a class="dropdown-item" href="#">Courriel de masse</a>
-        </div>
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">web</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Vitrine & enseignes</a></li>
+              <li><a class="dropdown-item" href="#">Véhicules</a></li>        </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Votre image</a>
+        <a class="nav-link" href="#">Portefolios</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">A propos</a>
@@ -63,7 +68,6 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Nous joindre</a>
       </li>
-      
     </ul>
   </div>
 </nav>

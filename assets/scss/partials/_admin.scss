@@ -1,0 +1,39 @@
+
+#admin-panel{
+    a{
+        display: block;
+    }
+
+    #nav-admin{
+        background-color: #C0AE9F;
+    }
+
+    #admin-menu-top{
+        background-color: #D9CEC5;
+    }
+
+    #admin-item-menu{
+        text-align: right;
+    }
+
+    .btn-item-nav{
+        color: #2E1700;
+        display: block;
+        width: 100%;
+        height: 100%; 
+    }
+
+    
+    #categories{
+        margin: 1em 0 0 0;
+    }
+    
+    #sub-categories{
+        margin: 3em 0 0 0;
+    }
+    
+    .add{
+        font-size: 15px;
+        text-align: center;
+    }
+}

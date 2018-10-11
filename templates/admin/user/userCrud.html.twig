@@ -1,0 +1,49 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ user.username }}{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ user.username }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {{ form_start(form) }}
+                <div style="padding-bottom: 2em">
+                    <div class="row">
+                        <div class="col-6">
+                            {{ form_row(form.username) }}
+                            {{ form_row(form.email) }}
+                            {{ form_row(form.isActive) }}   
+                        </div>
+
+                        <div class="col-6">
+                            {% set passwordBlockId = '' %}
+                            {% if password == false %}
+                                {% set passwordBlockId = 'password-block-id' %}
+                                <a class="btn btn-primary" id="toggle-password">changer le mot de passe</a>
+                            {% endif %}
+                        
+                            <div id="{{ passwordBlockId }}">
+                                {{ form_row(form.plainPassword.first) }}
+                                {{ form_row(form.plainPassword.second) }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button style="margin-top: 2em" type="submit">Enregistrer</button>
+                    </div>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/js/admin/user/user.js') }}"></script>
+{% endblock %}

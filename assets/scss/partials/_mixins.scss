@@ -1,0 +1,30 @@
+// ---------------------------------------------------------
+// Mixins
+// ---------------------------------------------------------
+
+@mixin font-size($size) {
+   font-size: #{$size}px; //Fallback in px
+   font-size: calculate-rem($size);
+}
+
+@mixin hover {
+   &:hover, &:focus {
+      @content;
+   }
+}
+
+@mixin group {
+   &:after {
+      content: '';
+      display: table;
+      clear: both;
+   }
+}
+
+@mixin aligncenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// 

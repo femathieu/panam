@@ -1,0 +1,8 @@
+// ---------------------------------------------------------
+// Functions
+// ---------------------------------------------------------
+
+@function calculate-rem($size) {
+    $rem-size: $size / $html-font-size;
+    @return #{$rem-size}rem;
+}

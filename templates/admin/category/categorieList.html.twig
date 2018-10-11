@@ -3,18 +3,43 @@
 {% block title %}Categories{% endblock %}
 
 {% block body %}
-    <h1>Catégories</h1>
-    <div class="row">
-        <div class="col-12">
-            <a href="{{ path( 'admin_category') }}" class="btn btn-success">Ajouter une catégorie</a>
+
+    <div id="categories">
+        <div class="row">
+            <div class="col-9">
+                <h1>Catégories</h1>
+            </div>
+            <div class="col-3">
+                <a href="{{ path( 'admin_category') }}" class="btn btn-success add">Ajouter une catégorie</a>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for category in categories %}
+                <div class="col-12">
+                    <a href="{{ path('admin_category', { 'id': category.id }) }}">{{ category.label }}</a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
-    <div class="row">
-        {% for category in categories %}
-            <div class="col-12">
-                <a href="{{ path('admin_category', { 'id': category.id }) }}">{{ category.label }}</a>
+    <div id="sub-categories">
+        <div class="row">
+            <div class="col-9">
+                <h2>Sous-Categories</h2>
             </div>
-        {% endfor %}
+            <div class="col-3">
+                <a href="{{ path('admin_sub_category') }}" class="btn btn-success add">Ajouter une sous-catégorie </a>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for subCategory in subCategories %}
+                <div class="col-12">
+                    <a href="">{{ subCategory.label }}</a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
+
 {% endblock %}

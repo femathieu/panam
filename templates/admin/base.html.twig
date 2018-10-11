@@ -8,20 +8,38 @@
         {% endblock %}
     </head>
     <body>
-        <header>
+        <div id="admin-panel">
             <div class="container">
-                <nav>
-                    <ul>
-                        <li><a class="btn" href="{{ path('logout') }}">Déconnexion</a></li>
-                        <li><a class="btn" href="{{ path('admin_users') }}">utilisateurs</a></li>
-                        <li><a class="btn" href="{{ path('admin_categories') }}">Categories</a></li>
-                    </ul>
-                </nav>
-                {% block header %}{% endblock %}
+                <div id="admin-menu-top">
+                    <div class="row">
+                        <div class="col-2 offset-10">
+                            <a class="btn" href="{{ path('logout') }}">Déconnexion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <header>
+                            <nav id="nav-admin">
+                                <ul>
+                                    <li><a class="btn btn-item-nav" href="{{ path('admin') }}">Home</a></li>
+                                    <li><a class="btn btn-item-nav" href="{{ path('admin_users') }}">utilisateurs</a></li>
+                                    <li><a class="btn btn-item-nav" href="{{ path('admin_categories') }}">Categories</a></li>
+                                </ul>
+                            </nav>
+                            {% block header %}{% endblock %}
+                        </header>
+                    </div>
+
+                    <div class="col-9">
+                        <div class="container">
+                            {% block body %}{% endblock %}
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </header>
-        <div class="container">
-            {% block body %}{% endblock %}
         </div>
         
         <script src="{{ asset('build/js/jquery.min.js') }}"></script>

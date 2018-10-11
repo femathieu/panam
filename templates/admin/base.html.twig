@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/css/style.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <a href="{{ path('logout') }}">Déconnexion</a>
+            {% block header %}{% endblock %}
+        </header>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('build/js/app.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

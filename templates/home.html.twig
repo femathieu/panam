@@ -1,64 +1,73 @@
 {% extends 'base.html.twig' %}
-
 {% block body%}
-     <header class="block-header fixed-top">
-      <!--Navbar-->
-<nav class="navbar navbar-dark  indigo darken-2">
-
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Navbar</a>
-
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
-        aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon4"><span></span><span></span><span></span></div></button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent22">
-
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-        </ul>
-        <!-- Links -->
-
-    </div>
-    <!-- Collapsible content -->
-
-</nav>
-<!--/.Navbar-->
-Hamburger icon within accordion 
-Info notification
-
-Copy the code above 
-      <!-- <nav class="navbar navbar-light">
-        <div class="col-2">
-          <a class="navbar-brand" href="#">
-            <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.35 118.83"><defs><style>.cls-1{fill:#1d4c9a;stroke:#1d4c9a;stroke-miterlimit:10;stroke-width:0.25px;}.cls-2{fill:#fff;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75px;}</style></defs><title>Fichier 9</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M73.17.17h-54l.2,72S68.51,40,119.34,41.8L110,41S112.66-1.46,73.17.17Zm15.41,36s.81,4.65-5.2,6-8.09-.52-39.78,7.18V19.72l23.16-.33S84.65,20.86,88.58,36.13Zm21.61,8S49.58,48.3.38,104.47v12.17L19.51,97.16v21.3H44V75.28H71.78C110.06,73.3,110.18,44.1,110.18,44.1Z"/><path class="cls-2" d="M110.18,44.1S49.58,48.3.38,104.47v12.17L19.51,97.16v21.3H44V75.28H71.78C110.06,73.3,110.18,44.1,110.18,44.1Z"/></g></g>
-            </svg>
-          </a>
-        </div>
-        <div class="col-10  justify-content-end">
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Se connecter</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
-              </a>
-            </li>
+  <header class="block-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Impression
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Produit standards</a>
+          <ul class="standard_product">
+            <li class="product">Cartes d'affaires</li>
+            <li class="product">Cartons publicitaires</li>
+            <li class="product">Accroche-portes</li>
+            <li class="product">Autcollant</li>
+            <li class="product">Affiches</li>
+            <li class="product">Bloc-notes</li>
+            <li class="product">Circulaires</li>
+          </ul>
+          <a class="dropdown-item" href="#">Grand format</a>
+          <ul class="bigformat-product">
+            <li class="product">Drapeaux</li>
+            <li class="product">Bannières en vinyle</li>
+            <li class="product">Coroplasts</li>
+            <li class="product">Panneaux-sandwich</li>
+          </ul>
+          <a class="dropdown-item" href="#">Lettrage</a>
+          <ul class="lettrage-product">
+            <li class="product">Vitrine & enseignes</li>
+            <li class="product">Véhicules</li>
+            <li class="product">Feuilles avec en-tête</li>
+            <li class="product">Cartes de souhaits</li>
+            <li class="product">Pochettes corporatives</li>
+            <li class="product">Menus / Dépliants</li>
           </ul>
         </div>
-      </nav> -->
-    </header>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          web
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Sites web</a>
+          <a class="dropdown-item" href="#">Gestion de réseaux sociaux</a>
+          <a class="dropdown-item" href="#">Courriel de masse</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Votre image</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">A propos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Carrière</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Nous joindre</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+  </header>
 
   <main class="block-main">
     <section class="block-section block-section-home">

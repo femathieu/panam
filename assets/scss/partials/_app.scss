@@ -192,96 +192,64 @@ h3{
 
 
 // Menu burger//////////
+header{
+  @media (min-width: $screen-md){
+    .first-level{
+      position: relative;
+      text-transform: uppercase;
+      .dropdown, .show{
+        position: initial;
+        .second-level{
+          text-align: center;
+          border: none;
+          margin-top: -2px;
+          min-width: 100%;
 
-body{
-  background: red;
-}
-
-.burger-menu{
-  position: absolute;
-  top: 5px;
-  left: 10px;
-}
-
-.panam-menu{
-  margin-top: 15px;
-}
-
-.animated-icon3, .animated-icon4 {
-  width: 30px;
-  height: 20px;
-  position: relative;
-  margin: 0px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-  span{
-   
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
-  }
-}
-
-.animated-icon3{
-  span{
-    background:blue;
-    &:nth-child(1) {
-      top: 0px;
-    }
-    &:nth-child(2) {
-      top: 10px;
-    }
-    &:nth-child(3) {
-      top: 10px;
-    }
-    &:nth-child(4) {
-      top: 20px;
-    }
-
-  }
-  &.open{
-    span{
-      &:nth-child(1) {
-        top: 11px;
-        width: 0%;
-        left: 50%;
+          .standard-product,.bigformat,.letering{
+            position: relative;
+            padding-bottom: 10px;
+            &:after{
+              content: '';
+              height: 1px;
+              width: 100%;
+              background: black;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+            }
+          }
+          .dropdown-menu{
+            display: block;
+            border: none;
+            min-width: 100%;  
+            text-align: center;          
+          }
+        }
       }
-      &:nth-child(2) {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-      &:nth-child(3) {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-      }
-      &:nth-child(4) {
-        top: 11px;
-        width: 0%;
-        left: 50%;
+      .print-item{
+        &.show{
+          .second-level{
+            height: 400px;;
+          }
+        }
       }
     }
-  }
+  } 
 }
+
+
+// .panam-menu{
+//   height: 50px;
+//   background: white;
+//   .panam-navbar{
+//     border-radius: 50px;
+//     padding: 15px 30px 10px 30px;
+//     margin: auto;
+//     margin-top: 15px;
+//     box-shadow: 0 11px 10px 0 rgba(0, 0, 0, 0.16);
+//     background-color: #ffffff;
+    
+
+//   }
+// }
+

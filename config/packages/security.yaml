@@ -7,6 +7,12 @@ security:
                     mathieu:
                         password: $2y$12$4iWnJUBmUxSyFvEDOO7dK.aUdsix4es0.4z0rIqEWCPCoYzg8CNPK
                         roles: 'ROLE_ADMIN'
+                    pierre:
+                        password: $2y$12$mHWQ/HJ4La9B4zR8xoSV2.1J0gS22.uO51/QywD5Kb4tgXRd84fP6
+                        roles: 'ROLE_ADMIN'
+                    camille: 
+                        password: $2y$12$zxvAyjSVLyP7HDqfhKXQuOM/UvwcbqQ8Bcx/rVE9xgAMi5ah6kHci
+                        roles: 'ROLE_ADMIN'
     encoders:
         Symfony\Component\Security\Core\User\User:
             algorithm: bcrypt

@@ -1,0 +1,18 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <h1> Utilisateurs </h1>
+    <table>
+        <tr>
+            <td>Nom d'utilistaeur</td>
+            <td>Adresse mail</td>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('admin_user', { 'id': user.id }) }}">{{ user.username }}</a></td>
+                <td>{{ user.email }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

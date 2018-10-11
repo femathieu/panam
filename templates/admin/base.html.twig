@@ -9,10 +9,16 @@
     </head>
     <body>
         <header>
-            <a href="{{ path('logout') }}">Déconnexion</a>
-            {% block header %}{% endblock %}
+            <div class="container">
+                <a class="btn" href="{{ path('logout') }}">Déconnexion</a>
+                {% block header %}{% endblock %}
+            </div>
         </header>
-        {% block body %}{% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+        
+        <script src="{{ asset('build/js/jquery.min.js') }}"></script>
         {% block javascripts %}
             <script src="{{ asset('build/js/app.js') }}"></script>
         {% endblock %}

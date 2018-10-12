@@ -193,7 +193,18 @@ h3{
 
 // Menu burger//////////
 header{
-  @media (min-width: $screen-md){
+
+.first-level{
+  .dropdown, .show{
+    .second-level{
+      .block-button{
+        display: none;
+      }
+    }
+  }
+}
+
+  @media (min-width: $screen-sm){
     .first-level{
       position: relative;
       text-transform: uppercase;
@@ -204,7 +215,16 @@ header{
           border: none;
           margin-top: -2px;
           min-width: 100%;
-
+          .block-button{
+            display: block;
+            position: relative;
+            .secondlev-close{
+              position: absolute;
+              left: 30px;
+              background: none;
+              border: none;
+            }
+          }
           .standard-product,.bigformat,.letering{
             position: relative;
             padding-bottom: 10px;

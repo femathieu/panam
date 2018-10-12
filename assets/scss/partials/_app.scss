@@ -207,10 +207,16 @@ header{
   @media (min-width: $screen-sm){
     .first-level{
       position: relative;
-      text-transform: uppercase;
+      .home,.print-item,.web-item,.portefolio,.apropos,.carriere,.join-us{
+        .nav-link{
+          text-transform: uppercase;
+        }
+      }
       .dropdown, .show{
         position: initial;
+        
         .second-level{
+          padding-top: 20px;
           text-align: center;
           border: none;
           margin-top: -2px;
@@ -223,6 +229,10 @@ header{
               left: 30px;
               background: none;
               border: none;
+              text-transform: uppercase;
+              &:before{
+                content: '✖'
+              }
             }
           }
           .standard-product,.bigformat,.letering{
@@ -232,17 +242,56 @@ header{
               content: '';
               height: 1px;
               width: 100%;
-              background: black;
+              background: gray;
               position: absolute;
               left: 0;
               bottom: 0;
+              border: none;
+
             }
           }
           .dropdown-menu{
             display: block;
             border: none;
             min-width: 100%;  
-            text-align: center;          
+            // text-align: center;
+                   
+          }
+          .dropdown-submenu{
+            margin-top: 20px;
+          }   
+          .seclev-title{
+            padding: 10px;
+            text-transform: uppercase;
+            position: relative;
+            &:after{
+              content: '';
+              position: absolute;
+              display: block;
+              width: 250px;
+              background: grey;
+              height: 1px;
+              left: 130px;
+              bottom: 9px;
+              /* margin-left: 177px; */
+              /* text-align: center; */
+              /* margin: auto; */
+              
+            }
+            &:before{
+              content: '';
+              position: absolute;
+              display: block;
+              width: 250px;
+              background: grey;
+              height: 1px;
+              right: 130px;
+              bottom: 9px;
+              /* margin-left: 177px; */
+              /* text-align: center; */
+              /* margin: auto; */
+              
+            }
           }
         }
       }

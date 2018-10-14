@@ -193,18 +193,81 @@ h3{
 
 // Menu burger//////////
 header{
-  @media (min-width: $screen-md){
+
+.first-level{
+  text-align: center;
+  text-transform: uppercase;
+  .navbar-toggler{
+    border: none;
+    background: none;
+  }
+  .dropdown, .show{
+    .second-level{
+      border: none;
+      text-align: center;
+      .block-button{
+        display: none;
+      }
+      .seclev-title{
+        display: none;
+      }
+      .dropdown-submenu{
+        .third-level{
+          border: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+  @media (min-width: $screen-sm){
     .first-level{
+      .cubique{
+          height: 25px;
+          .bordercircle{
+            // margin-top: 55px;
+            padding: 10px 15px 8px 15px;
+            background: white;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin: 25px auto auto auto;
+          }
+      }
       position: relative;
-      text-transform: uppercase;
+      .home,.print-item,.web-item,.portefolio,.apropos,.carriere,.join-us{
+        .nav-link{
+          text-transform: uppercase;
+        }
+      }
       .dropdown, .show{
         position: initial;
+        
         .second-level{
-          text-align: center;
+          padding: 20px 0 30px 0;
+          text-align: left;
           border: none;
           margin-top: -2px;
           min-width: 100%;
-
+          .block-button{
+            display: block;
+            position: relative;
+            .secondlev-close{
+              position: absolute;
+              left: 30px;
+              background: none;
+              border: none;
+              text-transform: uppercase;
+              &:before{
+                content: '✖'
+              }
+            }
+          }
+          .seclev-title{
+            display: block;
+            text-align: center;
+          }
           .standard-product,.bigformat,.letering{
             position: relative;
             padding-bottom: 10px;
@@ -212,24 +275,76 @@ header{
               content: '';
               height: 1px;
               width: 100%;
-              background: black;
+              background: gray;
               position: absolute;
               left: 0;
               bottom: 0;
+              border: none;
+
             }
           }
           .dropdown-menu{
             display: block;
             border: none;
             min-width: 100%;  
-            text-align: center;          
+            // text-align: center;
+                   
+          }
+          .dropdown-submenu{
+            margin-top: 20px;
+            .third-level{
+              text-align: left;
+            }
+          }   
+          .seclev-title{
+            padding: 10px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            position: relative;
+            margin: auto;
+            &:after{
+              content: '';
+              position: absolute;
+              display: block;
+              width: 220px;
+              background: grey;
+              height: 0.1px;
+              left: 13rem;
+              bottom: 9px;
+              border: none;
+            }
+            &:before{
+              content: '';
+              position: absolute;
+              display: block;
+              width: 220px;
+              background: grey;
+              height: 0.1px;
+              right: 13rem;
+              bottom: 9px;
+              border: none;
+            }
           }
         }
       }
       .print-item{
         &.show{
           .second-level{
-            height: 400px;;
+            height: 450px;;
+          }
+        }
+      }
+      .web-item{
+        .second-level{
+          .seclev-title{
+            padding: 10px;
+            margin-bottom: 10px;
+            &:before{
+              right: 4rem;
+            }
+            &:after{
+              left: 4rem;
+            }
           }
         }
       }

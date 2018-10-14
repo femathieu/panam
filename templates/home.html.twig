@@ -1,76 +1,115 @@
 {% extends 'base.html.twig' %}
 {% block body%}
   <header class="block-header fixed-top">
-    <nav class="first-level navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="print-item nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Impression
-        </a>
-            <ul class="second-level dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <div class="container">
-          <div class="row">
-              <li class="col-12 col-md-4 dropdown-submenu"><a class="dropdown-item standard-product" href="#">Produits standards</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Cartes d’affaires</a></li>
-                  <li><a class="dropdown-item" href="#">Cartons publicitaires</a></li>
-                  <li><a class="dropdown-item" href="#">Accorche-portes</a></li>
-                  <li><a class="dropdown-item" href="#">Autocollants</a></li>
-                  <li><a class="dropdown-item" href="#">Affiches</a></li>
-                  <li><a class="dropdown-item" href="#">Cartes postales</a></li>
-                  <li><a class="dropdown-item" href="#">Bloc-notes</a></li>
-                  <li><a class="dropdown-item" href="#">Circulaires</a></li>
-                  <li><a class="dropdown-item" href="#">Feuilles avec en-tête</a></li>
-                  <li><a class="dropdown-item" href="#">Cartes de souhaits</a></li>
-                  <li><a class="dropdown-item" href="#">Pochettes corporatives</a></li>
-                  <li><a class="dropdown-item" href="#">Menus / Dépliants</a></li>
-                </ul>
+  {# <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10"> #}
+        <div class="panam-menu">
+        
+        <nav class="first-level navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="cubique collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="bordercircle navbar-nav">
+              <li class="home nav-item active">
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
               </li>
-              <li class="col-12 col-md-4 dropdown-submenu"><a class="dropdown-item bigformat" href="#">Grand format</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Drapeaux</a></li>
-                  <li><a class="dropdown-item" href="#">Bannières en vinyle</a></li>
-                  <li><a class="dropdown-item" href="#">Coroplasts</a></li>
-                  <li><a class="dropdown-item" href="#">Panneaux-sandwich</a></li>  
+              <li class="print-item nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Impression
+                </a>
+                <ul class="second-level dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <div class="container">
+                    <div class="row">
+                      <div class="block-button">
+                        <button class="secondlev-close">fermer</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="row">
+                    <span class="col-3 seclev-title">Impression</span>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                        <li class="col-12 col-sm-12 col-md-4 dropdown-submenu"><a class="dropdown-item dropdown-toggle standard-product" href="#">Produits standards</a>
+                          <ul class="third-level dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Cartes d’affaires</a></li>
+                            <li><a class="dropdown-item" href="#">Cartons publicitaires</a></li>
+                            <li><a class="dropdown-item" href="#">Accorche-portes</a></li>
+                            <li><a class="dropdown-item" href="#">Autocollants</a></li>
+                            <li><a class="dropdown-item" href="#">Affiches</a></li>
+                            <li><a class="dropdown-item" href="#">Cartes postales</a></li>
+                            <li><a class="dropdown-item" href="#">Bloc-notes</a></li>
+                            <li><a class="dropdown-item" href="#">Circulaires</a></li>
+                            <li><a class="dropdown-item" href="#">Feuilles avec en-tête</a></li>
+                            <li><a class="dropdown-item" href="#">Cartes de souhaits</a></li>
+                            <li><a class="dropdown-item" href="#">Pochettes corporatives</a></li>
+                            <li><a class="dropdown-item" href="#">Menus / Dépliants</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-12 col-sm-12 col-md-4 dropdown-submenu"><a class="dropdown-item dropdown-toggle bigformat" href="#">Grand format</a>
+                          <ul class="third-level dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Drapeaux</a></li>
+                            <li><a class="dropdown-item" href="#">Bannières en vinyle</a></li>
+                            <li><a class="dropdown-item" href="#">Coroplasts</a></li>
+                            <li><a class="dropdown-item" href="#">Panneaux-sandwich</a></li>  
+                          </ul>
+                        </li>
+                        <li class="col-12 col-sm-12 col-md-4 dropdown-submenu"><a class="dropdown-item dropdown-toggle letering" href="#">Lettrage</a>
+                          <ul class="third-level dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Vitrine & enseignes</a></li>
+                            <li><a class="dropdown-item" href="#">Véhicules</a></li>
+                          </ul>
+                        </li>
+                    </div>
+                  </div>
                 </ul>
-              </li>
-              <li class="col-12 col-md-4 dropdown-submenu"><a class="dropdown-item letering" href="#">Lettrage</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Vitrine & enseignes</a></li>
-                  <li><a class="dropdown-item" href="#">Véhicules</a></li>
-                </ul>
-              </li>
-              </div>
-            </div>
-            </ul>
 
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">web</a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Vitrine & enseignes</a></li>
-              <li><a class="dropdown-item" href="#">Véhicules</a></li>        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Portefolios</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">A propos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Carrière</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Nous joindre</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+              </li>
+              <li class="web-item nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">web</a>
+                <ul class="second-level dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <div class="container">
+                    <div class="row">
+                      <div class="block-button">
+                        <button class="secondlev-close">fermer</button>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="row">
+                    <span class="seclev-title">web</span>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <li class="col-12 col-sm-12 col-md-4"><a class="dropdown-item" href="#">Sites web</a></li>
+                      <li class="col-12 col-sm-12 col-md-4"><a class="dropdown-item" href="#">Gestion de réseaux sociaux</a></li>
+                      <li class="col-12 col-sm-12 col-md-4"><a class="dropdown-item" href="#">Courriel de masse</a></li>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav-item portefolio">
+                <a class="nav-link" href="#">Portefolios</a>
+              </li>
+              <li class="nav-item apropos">
+                <a class="nav-link" href="#">A propos</a>
+              </li>
+              <li class="nav-item carriere">
+                <a class="nav-link" href="#">Carrière</a>
+              </li>
+              <li class="nav-item join-us">
+                <a class="nav-link" href="#">Nous joindre</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </div>
+      {# </div>
+    </div>
+  </div> #}
+
+
   </header>
 
   <main class="block-main">

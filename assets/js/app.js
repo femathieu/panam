@@ -25,7 +25,7 @@ $(document).ready(function() {
         return false;
       });
 
-    //   if( $('.print-item').hasClass('show') ) {
-    //     $(this).children('.second-level').addClass('.print-item-height');
-    //     }
+      $('.secondlev-close').on('click', function(e) {
+          $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+      });
 });

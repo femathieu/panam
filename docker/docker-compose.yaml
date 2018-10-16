@@ -1,0 +1,25 @@
+version: '3'
+services:
+    postgres:
+        image: postgres
+        ports:
+            - '5433:5432'
+    php:
+        build: ./php
+        ports:
+            - '9002:9000'
+        volumes:
+            - /app:/var/www/app:cached
+            - ./logs/symfony:/var/www/app/var/logs:cached
+        links:
+            - postgres
+    nginx:
+        build: ./nginx
+        ports:
+            - '8080:80'
+        links:
+            - php
+        volumes:
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - ../app:/var/www/app:cached
+            - ./logs/nginx/:/var/log/nginx:cached
